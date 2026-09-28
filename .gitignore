@@ -1,0 +1,5 @@
+# Public repository allowlist. Installers/packages are uploaded to Releases.
+*
+!/.gitignore
+!/README.md
+!/CHANGELOG.md
