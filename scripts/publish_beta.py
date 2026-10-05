@@ -6,11 +6,14 @@ Artifacts are immutable once a release is published; use a new version to fix on
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
+import io
 import json
 from pathlib import Path
 import subprocess
 import sys
+import time
 
 import requests
 
@@ -18,6 +21,25 @@ import requests
 REPOSITORY = "hihodaynee/ai-studio-releases"
 API = f"https://api.github.com/repos/{REPOSITORY}"
 HEADERS = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+
+
+class UploadStream(io.BufferedReader):
+    def __init__(self, path: Path):
+        super().__init__(io.FileIO(path, "rb"), buffer_size=1024 * 1024)
+        self.label = path.name
+        self.total = path.stat().st_size
+        self.last_report = time.monotonic()
+
+    def read(self, size=-1):
+        # HTTP accepts arbitrary non-empty stream blocks. Larger blocks avoid
+        # tens of thousands of small TLS writes for the Windows bundle.
+        block = super().read(max(size, 1024 * 1024) if size > 0 else size)
+        now = time.monotonic()
+        if now - self.last_report >= 20 or not block:
+            print(json.dumps({"uploading": self.label, "read_bytes": self.tell(),
+                              "total_bytes": self.total}), flush=True)
+            self.last_report = now
+        return block
 
 
 def credential() -> str:
@@ -94,8 +116,11 @@ def main():
             "target_commitish": "main", "name": args.title, "body": notes, "draft": True,
             "prerelease": True, "generate_release_notes": False}, timeout=30))
     upload_url = release["upload_url"].split("{", 1)[0]
-    for name, (path, size, digest) in artifacts.items():
-        remote_assets = {item["name"]: item for item in checked(session.get(
+    def upload_one(item):
+        name, (path, size, digest) = item
+        transfer = requests.Session()
+        transfer.headers.update(session.headers)
+        remote_assets = {item["name"]: item for item in checked(transfer.get(
             release["assets_url"], params={"per_page": 100}, timeout=30))}
         asset = remote_assets.get(name)
         # A broken HTTPS stream can leave a draft-only "starter" asset which
@@ -103,18 +128,21 @@ def main():
         if asset is not None and asset.get("state") != "uploaded":
             if not release["draft"]:
                 raise RuntimeError("Incomplete asset on a published release")
-            removal = session.delete(asset["url"], timeout=30)
+            removal = transfer.delete(asset["url"], timeout=30)
             if removal.status_code != 204:
                 raise RuntimeError(f"Cannot remove incomplete draft asset: HTTP {removal.status_code}")
             asset = None
         if asset is None:
             print(json.dumps({"uploading": name, "bytes": size}), flush=True)
-            with path.open("rb") as stream:
-                asset = checked(session.post(upload_url, params={"name": name}, data=stream,
+            with UploadStream(path) as stream:
+                asset = checked(transfer.post(upload_url, params={"name": name}, data=stream,
                     headers={"Content-Type": "application/octet-stream", "Content-Length": str(size)},
                     timeout=(30, 3600)))
-        verify_asset(session, asset, size, digest)
+        verify_asset(transfer, asset, size, digest)
         print(json.dumps({"verified": name, "sha256": digest}), flush=True)
+        transfer.close()
+    with ThreadPoolExecutor(max_workers=min(2, len(artifacts))) as pool:
+        list(pool.map(upload_one, artifacts.items()))
     if args.publish:
         release = checked(session.patch(release["url"], json={"draft": False}, timeout=30))
     print(json.dumps({"tag": args.tag, "draft": release["draft"],
