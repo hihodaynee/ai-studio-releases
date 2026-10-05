@@ -3,3 +3,5 @@
 !/.gitignore
 !/README.md
 !/CHANGELOG.md
+!/scripts/
+!/scripts/publish_beta.py
