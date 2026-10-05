@@ -137,7 +137,9 @@ def main():
             with UploadStream(path) as stream:
                 asset = checked(transfer.post(upload_url, params={"name": name}, data=stream,
                     headers={"Content-Type": "application/octet-stream", "Content-Length": str(size)},
-                    timeout=(30, 3600)))
+                    # requests also uses the connect timeout while writing the
+                    # request body. Allow slow/stalled uplinks time to recover.
+                    timeout=(300, 3600)))
         verify_asset(transfer, asset, size, digest)
         print(json.dumps({"verified": name, "sha256": digest}), flush=True)
         transfer.close()
