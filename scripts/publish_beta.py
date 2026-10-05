@@ -94,10 +94,19 @@ def main():
             "target_commitish": "main", "name": args.title, "body": notes, "draft": True,
             "prerelease": True, "generate_release_notes": False}, timeout=30))
     upload_url = release["upload_url"].split("{", 1)[0]
-    remote_assets = {item["name"]: item for item in checked(session.get(
-        release["assets_url"], params={"per_page": 100}, timeout=30))}
     for name, (path, size, digest) in artifacts.items():
+        remote_assets = {item["name"]: item for item in checked(session.get(
+            release["assets_url"], params={"per_page": 100}, timeout=30))}
         asset = remote_assets.get(name)
+        # A broken HTTPS stream can leave a draft-only "starter" asset which
+        # blocks a retry under the same filename. Never remove a completed one.
+        if asset is not None and asset.get("state") != "uploaded":
+            if not release["draft"]:
+                raise RuntimeError("Incomplete asset on a published release")
+            removal = session.delete(asset["url"], timeout=30)
+            if removal.status_code != 204:
+                raise RuntimeError(f"Cannot remove incomplete draft asset: HTTP {removal.status_code}")
+            asset = None
         if asset is None:
             print(json.dumps({"uploading": name, "bytes": size}), flush=True)
             with path.open("rb") as stream:
