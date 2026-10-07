@@ -5,3 +5,4 @@
 !/CHANGELOG.md
 !/scripts/
 !/scripts/publish_beta.py
+!/scripts/publish_release.py
