@@ -1,5 +1,14 @@
 # Lịch sử phát hành
 
+## 1.0.1 (stable)
+
+- Giữ bản thu khi chuyển bước trong lúc tạo Voice; tự lưu đúng kịch bản và cho phép thử lại khi lưu lỗi. Đồng bộ lựa chọn giọng đọc sang Phụ đề.
+- Tách nhân vật của từng câu chuyện khỏi nhân vật dùng chung của kênh; lưu vào Brandkit cần người dùng xác nhận.
+- Phác thảo nhiều nhân vật song song, prompt theo phong cách hình ảnh và mô tả riêng cho vai chính.
+- Form Brandkit dùng popup, hỗ trợ JSON và khôi phục ảnh xem trước trong kho mẫu.
+- Sửa viết lại bản nháp trong đúng hội thoại; cải thiện YouTube Shorts, chọn thư mục và nhận diện model Flow/Gemini.
+- Giữ kênh stable và định danh cài đặt của 1.0.0 để cập nhật tại chỗ.
+
 ## 1.0.0 (stable)
 
 - Bản production đầu tiên với tên AI Studio, build từ source mới nhất sau dev.20.
