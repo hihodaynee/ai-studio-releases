@@ -2,9 +2,9 @@
 
 Kho phân phối các bản cài đặt và cập nhật AI Studio cho Windows.
 
-Tải [AI Studio 1.1.1 stable](https://github.com/hihodaynee/ai-studio-releases/releases/tag/v1.1.1) cho Windows x64. Dùng tệp `HITechDev.AIStudio.F0-stable-Setup.exe` để cài mới hoặc cài đè bản beta/dev; dữ liệu ứng dụng được giữ lại.
+Tải [AI Studio 1.1.2 stable](https://github.com/hihodaynee/ai-studio-releases/releases/tag/v1.1.2) cho Windows x64. Dùng tệp `HITechDev.AIStudio.F0-stable-Setup.exe` để cài mới hoặc cài đè bản beta/dev; dữ liệu ứng dụng được giữ lại.
 
-Máy đang dùng 1.0.0 hoặc 1.0.1 có thể cập nhật trong **Cài đặt → Cập nhật ứng dụng**. Nếu bản cũ vẫn báo lỗi kết nối và không nhận được cập nhật, tải Setup 1.1.1 để nâng cấp một lần. Từ 1.1.1, app tự dùng kết nối HTTPS của Windows để phục hồi khi kết nối cập nhật ban đầu gặp lỗi.
+Máy đang dùng các phiên bản trước (1.0.0, 1.0.1, 1.1.1) có thể cập nhật trong **Cài đặt → Cập nhật ứng dụng**. Người dùng sẽ thấy thông báo cập nhật trực quan trên giao diện khi có bản mới.
 
 Xem [lịch sử thay đổi](CHANGELOG.md) và ghi chú của từng bản phát hành trước khi cập nhật.
 

@@ -1,5 +1,14 @@
 # Lịch sử phát hành
 
+## 1.1.2 (stable)
+
+- Hiển thị thông báo và nhắc nhở nổi bật khi có phiên bản mới, cho phép cập nhật ngay hoặc bỏ qua.
+- Tự động khắc phục lỗi gộp SRT / phụ đề: tích hợp cơ chế căn chỉnh từ Whisper (word alignment fallback) khi AI gián đoạn, cho phép bấm tạo lại thành công.
+- Tăng cường độ tin cậy Gemini: biên nhận phản hồi bền vững (durable response receipts), thử lại lũy tiến (exponential backoff) và ngăn chặn trùng lặp yêu cầu.
+- Nâng cấp Flow & Composer: hỗ trợ chọn model video Flow; bổ sung điều khiển âm lượng và âm thanh video trong Composer.
+- Tối ưu bộ nhớ công cụ nhanh khi tải ảnh tham chiếu từ thư mục.
+- Kiểm thử toàn diện nâng cấp tự động từ các phiên bản 1.0.0, 1.0.1 và 1.1.1.
+
 ## 1.1.1 (stable)
 
 - Tự phục hồi kết nối kiểm tra và tải cập nhật bằng HTTPS của Windows khi kết nối ban đầu gặp lỗi chứng chỉ hoặc lỗi mạng.
