@@ -1,5 +1,13 @@
 # Lịch sử phát hành
 
+## 1.1.1 (stable)
+
+- Tự phục hồi kết nối kiểm tra và tải cập nhật bằng HTTPS của Windows khi kết nối ban đầu gặp lỗi chứng chỉ hoặc lỗi mạng.
+- Giữ xác minh chữ ký thông tin cập nhật, kích thước và hash gói trước khi cài.
+- Sửa thao tác kiểm tra cập nhật bị bỏ qua khi trùng với lúc giao diện đọc trạng thái.
+- Cho thử lại sau lỗi kết nối trong 5 giây, hiển thị thời gian chờ và thông báo lỗi cụ thể hơn.
+- Đã kiểm chứng EXE tự phục hồi lỗi TLS trên Revo mới và nâng cấp cục bộ từ 1.0.0/1.0.1, giữ dữ liệu thử. Bước cài Setup trực tiếp trên Revo được bỏ qua.
+
 ## 1.0.1 (stable)
 
 - Giữ bản thu khi chuyển bước trong lúc tạo Voice; tự lưu đúng kịch bản và cho phép thử lại khi lưu lỗi. Đồng bộ lựa chọn giọng đọc sang Phụ đề.
