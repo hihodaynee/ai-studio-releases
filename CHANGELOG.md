@@ -1,5 +1,15 @@
 # Lịch sử phát hành
 
+## 1.1.3 (stable)
+
+- Giữ đúng âm lượng video khi xuất CapCut, kể cả mức 0, và cho phép điều chỉnh tiếp trong CapCut.
+- Bổ sung phụ đề xuất hiện từng từ hoặc theo nhóm từ; giữ bố cục và cỡ chữ khi xuất CapCut.
+- Kiểm tra tài khoản và cấu hình trước khi dùng AI, tạo ảnh/video và phân tích YouTube; thông báo rõ thông tin còn thiếu.
+- Gom thay đổi cài đặt vào nút Lưu chung; nút chỉ bật khi có thay đổi và nhắc khi đóng mà chưa lưu.
+- Giữ thumbnail và phương án đã chọn sau khi mở lại app; dùng ảnh đã chọn làm bìa kịch bản và bổ sung ảnh tham chiếu nhân vật khi tạo thumbnail.
+- Đăng nhập Google nhanh nhận danh sách email/mật khẩu bằng khoảng trắng, tab hoặc dấu |; tiếp tục điền mật khẩu sau CAPTCHA. Xác minh bảo mật của Google vẫn thực hiện trong trình duyệt.
+- Đã kiểm tra bản EXE, payload bộ cài/gói cập nhật và nâng cấp bằng Update.exe từ 1.0.0 và 1.1.2, giữ dữ liệu thử.
+
 ## 1.1.2 (stable)
 
 - Hiển thị thông báo và nhắc nhở nổi bật khi có phiên bản mới, cho phép cập nhật ngay hoặc bỏ qua.
