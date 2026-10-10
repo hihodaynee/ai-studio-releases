@@ -1,5 +1,16 @@
 # Lịch sử phát hành
 
+## 1.1.4 (stable)
+
+- Làm mới YouTube với tìm nguồn theo thị trường/ngôn ngữ/chủ đề/danh mục, lưu nguồn, theo dõi kênh và so sánh nguồn.
+- Thêm Kênh của tôi: OAuth Desktop, liên kết video với kịch bản, YouTube Analytics, đối chiếu SRT và bài học để thử trong kịch bản mới.
+- Tách hướng dẫn Data API key và Analytics; hỗ trợ nhập file JSON Desktop và cải thiện giao diện báo cáo/tab.
+- Thêm ảnh tham chiếu phong cách theo Brandkit, kiểm tra ảnh và dọn khi không còn nơi sử dụng.
+- Dọn nguồn phân tích và tệp tạm hết hạn, bảo vệ tài nguyên đang được dùng trong Brandkit/kịch bản.
+- Thumbnail chỉ dùng ảnh nhân vật chính; kịch bản chỉ có nhân vật phụ không gửi ảnh tham chiếu.
+- Lưu media vào đúng thư mục kịch bản và cải thiện khôi phục ngữ cảnh Gemini.
+- Analytics cần cấu hình/cấp quyền riêng. Nhận xét AI từ số liệu Analytics chưa bật; có xem số liệu và lưu bài học thủ công.
+
 ## 1.1.3 (stable)
 
 - Giữ đúng âm lượng video khi xuất CapCut, kể cả mức 0, và cho phép điều chỉnh tiếp trong CapCut.
