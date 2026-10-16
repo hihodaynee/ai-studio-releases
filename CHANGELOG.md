@@ -1,5 +1,17 @@
 # Lịch sử phát hành
 
+## 1.2.0 (stable) — 17/10/2026
+
+- Thêm quy trình Auto bên cạnh Manual. Auto chuẩn bị kịch bản, nhân vật, giọng đọc, phụ đề, thumbnail và cảnh đến bản dựng; bạn chỉnh sửa rồi tự xuất sang CapCut. Kịch bản cũ giữ chế độ Manual.
+- Theo dõi Auto bằng thanh tiến độ, nhật ký gọn và âm báo lỗi. Tạm dừng, lưu cài đặt và tiếp tục để áp dụng lựa chọn mới cho phần chưa thực hiện.
+- Chọn chế độ chỉ ảnh, ảnh xen video hoặc toàn bộ video; thiết lập model ảnh/video và số luồng theo tài khoản khả dụng.
+- Thumbnail có ba phương án với ảnh và tiêu đề riêng. Chọn ảnh bìa trong kết quả và giữ lựa chọn khi mở lại.
+- Cải thiện gửi/nhận và khôi phục Gemini Web dùng chung cho Auto và Manual, hỗ trợ tài khoản Pro hoặc chỉ có Gemini Tự động. Giữ Gemini Web mặc định, thêm Gemini API bên cạnh DeepSeek.
+- Cải thiện khôi phục JSON và xử lý nội dung đa ngôn ngữ; hiệu chỉnh thời lượng kịch bản theo 32 mẫu giọng đọc thực tế.
+- Sắp xếp lại Cài đặt và tổng quan Auto; hướng dẫn lần đầu và tính năng mới bằng Product Tour, không lặp lại hướng dẫn đã xem.
+- Sửa khởi động lại desktop và khôi phục tác vụ media, giữ kết quả đã hoàn thành khi tiếp tục.
+- Đã kiểm tra EXE, payload Setup/gói cập nhật và nâng cấp bằng Update.exe từ 1.0.0, 1.1.4, giữ dữ liệu thử.
+
 ## 1.1.4 (stable)
 
 - Làm mới YouTube với tìm nguồn theo thị trường/ngôn ngữ/chủ đề/danh mục, lưu nguồn, theo dõi kênh và so sánh nguồn.
