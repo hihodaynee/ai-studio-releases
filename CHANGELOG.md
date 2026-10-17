@@ -1,5 +1,25 @@
 # Lịch sử phát hành
 
+## 1.2.1 (stable) — 17/10/2026
+
+### Sửa lỗi bảo vệ tài nguyên
+- Chặn xóa cả thư mục dự án nếu thư mục đó trùng hoặc lồng với thư mục của dự án khác, tránh xóa nhầm ảnh, video và tài nguyên đang sử dụng.
+- Thông báo rõ dự án cần được bảo vệ. Bạn có thể bỏ chọn xóa thư mục để giữ tệp trên ổ đĩa và chỉ xóa dự án khỏi ứng dụng.
+
+### Bao gồm các tính năng mới của v1.2.0
+- Thêm quy trình Auto bên cạnh Manual. Auto chuẩn bị kịch bản, nhân vật, giọng đọc, phụ đề, thumbnail và cảnh đến bản dựng; bạn chỉnh sửa rồi tự xuất sang CapCut.
+- Theo dõi Auto bằng thanh tiến độ, nhật ký gọn và âm báo lỗi. Tạm dừng, lưu cài đặt và tiếp tục để áp dụng lựa chọn mới cho phần chưa thực hiện.
+- Chọn chế độ chỉ ảnh, ảnh xen video hoặc toàn bộ video; thiết lập model ảnh/video và số luồng theo tài khoản khả dụng.
+- Thumbnail có ba phương án với ảnh và tiêu đề riêng. Chọn ảnh bìa trong kết quả và giữ lựa chọn khi mở lại.
+- Cải thiện gửi/nhận và khôi phục Gemini Web dùng chung cho Auto và Manual, hỗ trợ tài khoản Pro hoặc chỉ có Gemini Tự động. Giữ Gemini Web mặc định, thêm Gemini API bên cạnh DeepSeek.
+- Cải thiện khôi phục JSON và xử lý nội dung đa ngôn ngữ; hiệu chỉnh thời lượng kịch bản theo 32 mẫu giọng đọc thực tế.
+- Sắp xếp lại Cài đặt và tổng quan Auto; hướng dẫn lần đầu và tính năng mới bằng Product Tour, không lặp lại hướng dẫn đã xem.
+- Sửa khởi động lại desktop và khôi phục tác vụ media, giữ kết quả đã hoàn thành khi tiếp tục.
+
+Kịch bản cũ giữ chế độ Manual. Dữ liệu, cài đặt và trạng thái hướng dẫn đã xem được giữ khi nâng cấp. Bản vá không tự phục hồi những tệp đã bị xóa trước đó.
+
+- Đã kiểm tra lớp bảo vệ trên EXE, payload Setup/gói cập nhật và nâng cấp bằng Update.exe từ 1.1.4, 1.2.0, giữ dữ liệu mẫu.
+
 ## 1.2.0 (stable) — 17/10/2026
 
 - Thêm quy trình Auto bên cạnh Manual. Auto chuẩn bị kịch bản, nhân vật, giọng đọc, phụ đề, thumbnail và cảnh đến bản dựng; bạn chỉnh sửa rồi tự xuất sang CapCut. Kịch bản cũ giữ chế độ Manual.
