@@ -1,5 +1,29 @@
 # Lịch sử phát hành
 
+## 1.2.2 (stable) — 19/10/2026
+
+### Giọng đọc ElevenLabs
+
+- Thêm ElevenLabs API bên cạnh Voice Local trong quy trình Auto. Nhập API key và Voice ID, lưu để kiểm tra giọng, model và ngôn ngữ hỗ trợ.
+- Kịch bản dài được chia theo giới hạn model và ưu tiên ngắt ở cuối câu. Các phần đã tạo được giữ để tiếp tục; lỗi credit hoặc quyền truy cập có hướng dẫn xử lý cụ thể.
+- Thêm nút hướng dẫn tạo API key, bật quyền cần thiết và lấy Voice ID. API key được bảo vệ trên máy.
+
+### Giao diện Việt và Anh
+
+- Chuyển ngôn ngữ ở thanh bên, phía trên nút đổi sáng/tối. Dịch giao diện và nhật ký Auto theo ngôn ngữ đã chọn, giữ nguyên nội dung do người dùng soạn.
+- Bản tiếng Việt giữ bảng gói và thanh toán hiện tại. Bản English hiển thị QR và liên hệ Telegram để đối tác ngoài Việt Nam kích hoạt bản quyền.
+- Tour làm quen giới thiệu thêm Quy trình video, Gợi ý tiêu đề, Brandkit, YouTube và Công cụ nhanh. Tour tính năng mới giữ các bước cũ và thêm hướng dẫn ElevenLabs.
+
+### Bản quyền và khôi phục
+
+- Tăng bảo vệ chống trùng mã bản quyền, gắn khóa xác thực với định danh thiết bị và chặn dùng lại khóa đã thuộc thiết bị khác.
+- Cải thiện lưu và phục hồi khóa máy khi cài lại trên cùng máy và tài khoản Windows. Các trường hợp thay đổi định danh có hướng dẫn kiểm tra, giữ dữ liệu và liên hệ hỗ trợ.
+- Kế thừa bản vá v1.2.1: chặn xóa thư mục dự án trùng hoặc lồng với thư mục của dự án khác, giúp bảo vệ tài nguyên đang dùng chung.
+
+Xem lại tour tại **Cài đặt → Cấu hình chung → Hướng dẫn sử dụng**. Trạng thái tour đã xem được giữ khi nâng cấp. ElevenLabs sử dụng hạn mức của tài khoản/API key do bạn cung cấp.
+
+- Đã đối chiếu payload Setup/gói cập nhật và diễn tập nâng cấp bằng Update.exe từ 1.2.0, 1.2.1; giữ dữ liệu mẫu. Metadata cập nhật được ký Ed25519. Bộ cài chưa ký Authenticode.
+
 ## 1.2.1 (stable) — 17/10/2026
 
 ### Sửa lỗi bảo vệ tài nguyên
