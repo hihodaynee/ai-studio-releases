@@ -1,5 +1,25 @@
 # Lịch sử phát hành
 
+## 1.2.4 (stable) — 24/10/2026
+
+### Chat AI và tiếp tục tác vụ
+
+- Thêm ChatGPT bằng giao diện web, quản lý tài khoản và giới hạn tải tệp trong Cài đặt. Gemini tiếp tục là nguồn chat AI mặc định.
+- Tách dữ liệu đầu vào thành tệp TXT và gửi skill bằng tệp riêng. Khi chat lỗi, lần tiếp theo mở hội thoại mới với các dữ liệu đã lưu.
+- Phụ đề và prompt ảnh chạy các phần theo số luồng đã cấu hình, hiển thị tiến độ và giữ các phần hợp lệ khi tiếp tục.
+
+### Quy trình video và giọng đọc
+
+- Quy trình video mới mặc định Auto. Lưu nhân vật chính vào Brandkit là lựa chọn trong kết quả và không dừng hàng đợi.
+- Cải thiện nhận dạng lời nói, căn thời gian và tiếp tục tạo phụ đề; giữ kết quả đã hoàn thành.
+- Thêm công cụ giọng đọc local trong Công cụ nhanh. Âm thanh chỉ tồn tại trong phiên hiện tại để nghe và tải về; không lưu vào thư viện dự án.
+- Cải thiện khởi động lại backend trên Windows và xử lý tên thư mục kịch bản.
+
+### Kiểm tra phát hành
+
+- Đã đối chiếu payload Setup/gói cập nhật, kiểm tra runtime đóng gói và nâng cấp thật bằng Update.exe từ 1.2.2 và 1.2.3, giữ dữ liệu thử.
+- Giới hạn: bộ cài chưa ký Authenticode; chưa chạy Setup trên Windows sạch. Lượt QA đóng gói không gọi Gemini/ChatGPT hoặc tạo ảnh/video thật.
+
 ## 1.2.3 (stable) — 22/10/2026
 
 ### Gemini và phục hồi tác vụ AI
