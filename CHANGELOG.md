@@ -1,5 +1,23 @@
 # Lịch sử phát hành
 
+## 1.2.5 (stable) — 25/10/2026
+
+- Cải thiện Gemini Web: giữ phiên và tệp đầu vào, nhận phản hồi hoàn tất, chọn đúng Pro/Tự động và tư duy Trung bình theo tài khoản/cài đặt. Tài khoản mất đăng nhập được hiển thị rõ và không bị thử lặp vô ích.
+- Auto đọc lại cấu hình khi tiếp tục, giữ các bước đã hoàn tất và không gửi trùng lượt đã có biên nhận. Dữ liệu AI đi trong TXT, skill được đính kèm riêng.
+- Phụ đề: Gemini nhận kịch bản chuẩn và SRT thô để sửa chữ, chia cue. Kết quả SRT được tự duyệt; các kiểm tra độ tin cậy từ Whisper không còn chặn hàng đợi. Giữ nguyên cách chia và mốc thời gian AI trả về.
+- Giọng đọc Google AI Studio Web: Nam Bodi/Nữ Fola, chia ở cuối câu với tối đa 8.500 ký tự/phần, chạy theo số luồng đã chọn và ghép thành một file trước nhận dạng lời nói. Khi nâng cấp lần này, mặc định Auto chuyển sang Google AI Studio, Nam Bodi; người dùng vẫn đổi được trong Cài đặt.
+- Brandkit: thêm và xóa từng ảnh tham chiếu phong cách, có xác nhận khi xóa; giữ nguyên các kịch bản và tài sản đã lưu.
+- Cải thiện Dola/Flow cho ảnh và video: kiểm tra phiên, mode và ảnh đầu, lưu biên nhận, phân biệt từ chối nội dung với lỗi kỹ thuật. Prompt bị từ chối được sửa bằng AI tối đa một lần; nếu vẫn lỗi, hướng dẫn đổi công cụ trong Cài đặt.
+- Tiếp tục các phần còn thiếu, giữ ảnh/video/giọng đọc đã xong, timeline và dữ liệu dự án. Hướng dẫn ElevenLabs phân biệt quyền API/Voice Library với lỗi hạn mức.
+
+Windows x64. Tải HITechDev.AIStudio.F0-stable-Setup.exe để cài mới hoặc cập nhật từ bản cũ. Dữ liệu dự án, tài khoản và Brandkit được giữ lại.
+
+### Kiểm tra phát hành
+
+- Đã đối chiếu nội dung Setup/gói cập nhật, kiểm tra runtime đóng gói và nâng cấp thật bằng Update.exe từ 1.2.3 và 1.2.4, giữ dữ liệu thử.
+- EXE thật đã kiểm tra cấu hình giọng mặc định chuyển một lần khi nâng cấp và giữ lựa chọn mới sau lần khởi động tiếp theo.
+- Giới hạn: bộ cài chưa ký Authenticode; chưa chạy Setup trên Windows sạch. Lượt QA đóng gói không gọi Gemini/ChatGPT hoặc tạo ảnh/video thật.
+
 ## 1.2.4 (stable) — 24/10/2026
 
 ### Chat AI và tiếp tục tác vụ
