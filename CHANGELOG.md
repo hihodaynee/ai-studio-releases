@@ -1,5 +1,24 @@
 # Lịch sử phát hành
 
+## 1.2.6 (stable) — 27/10/2026
+
+- Viết nháp, biên tập và hoàn thiện kịch bản theo từng phần trên Gemini, ChatGPT và DeepSeek Web. Đếm lượng lời kể thực tế, chỉ bổ sung phần thiếu và giữ các phần đã đạt khi thử lại.
+- Thêm DeepSeek Web trong Cài đặt Chat AI, đăng nhập bằng profile tài khoản đã lưu; tự giữ DeepThink và Search được bật.
+- ChatGPT tự điều phối nhiều tài khoản. Đọc gói Free/Plus từ giao diện; phát hiện hạn mức tải tệp và cho phép dùng lại theo ngày/giờ ChatGPT thông báo.
+- Cải thiện đính kèm đủ TXT/skill, nhận câu trả lời hoàn tất và đọc lại đúng kết quả ChatGPT đã gửi. Skill tiếp tục là tệp riêng.
+- Dùng Chromium đi kèm app và đúng profile tài khoản. Cải thiện xác nhận sau đăng nhập, hiển thị trạng thái cần thao tác và icon trình duyệt để theo dõi.
+- Tạm dừng Auto đóng phiên chat đang chạy và giải phóng tài khoản; có thể xóa kịch bản đã tạm dừng. Bỏ các nút Thêm tài khoản Google và Dừng lượt chạy cũ.
+- Tiếp tục video theo provider/model và ảnh đầu vào hiện tại, giữ video đã xong; thông báo phân biệt Google Flow và Dola, hỗ trợ thay ảnh đầu cho cảnh lỗi.
+
+Windows x64. Tải HITechDev.AIStudio.F0-stable-Setup.exe để cài mới hoặc cập nhật. Giữ dữ liệu dự án, tài khoản, Brandkit và các thiết lập đã lưu.
+
+### Kiểm tra phát hành
+
+- 396 kiểm thử backend liên quan, bốn kiểm thử giao diện tài khoản/chat và kiểm tra TypeScript đạt. Kiểm thử công cụ phát hành: 29 ca và 79 kiểm tra con đạt.
+- Đối chiếu payload Setup/gói cập nhật, kiểm tra runtime EXE và nâng cấp bằng Update.exe từ 1.2.4/1.2.5, giữ dữ liệu thử. Các migration DeepSeek, chọn ảnh đầu video và lưu phần kịch bản có trong bản đóng gói.
+- Kiểm thử chat web thật tại source: draft DeepSeek 8.450 ký tự Nhật (~28:53 cho ca 30 phút), Gemini 548 ký tự (~1:52), ChatGPT 521 ký tự (~1:47 cho ca 2 phút). Đây là thời lượng ước tính; không phải đo TTS. Gemini/GPT được giới hạn thử đến draft theo yêu cầu.
+- Metadata cập nhật ký Ed25519. Chưa ký Authenticode hoặc chạy Setup trên Windows sạch; QA EXE không gọi provider thật.
+
 ## 1.2.5 (stable) — 25/10/2026
 
 - Cải thiện Gemini Web: giữ phiên và tệp đầu vào, nhận phản hồi hoàn tất, chọn đúng Pro/Tự động và tư duy Trung bình theo tài khoản/cài đặt. Tài khoản mất đăng nhập được hiển thị rõ và không bị thử lặp vô ích.
