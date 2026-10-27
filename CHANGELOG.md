@@ -1,5 +1,21 @@
 # Lịch sử phát hành
 
+## 1.2.8 — 28/10/2026
+
+- Công cụ nhanh dùng cùng Studio giọng đọc, bộ giọng, chế độ đọc và biểu cảm với Manual; nghe và tải WAV ngay trong tab.
+- Khám phá với AI dừng hỏi khi brief sẵn sàng hoặc đủ sáu câu trả lời. Nút chốt brief được đưa lên rõ ràng để người dùng chủ động xác nhận.
+- Gemini API hỗ trợ tối đa 20 key lưu mã hóa trên máy, tự chuyển sang key còn khả dụng khi gặp giới hạn HTTP 429, giữ model, lịch sử và file đầu vào.
+- Gemini Web cho tài khoản trả phí lưu lựa chọn Flash/Pro và xác minh model trên giao diện; Free dùng Tự động với suy nghĩ Trung bình.
+- Cải thiện nút gửi chat và nhận diện file đính kèm ChatGPT/DeepSeek. Thông báo hết lượt tải file ChatGPT ngắn, rõ hơn.
+- DeepSeek hỗ trợ đăng nhập theo danh sách hồ sơ Google đã lưu, có tiến độ và hủy; xác minh bổ sung do người dùng xử lý. DeepSeek Web trở thành mặc định một lần khi nâng cấp; lựa chọn sau đó được giữ.
+- Hỗ trợ lưu giọng đọc tự động dài đến 512 MB, giữ liên kết với kịch bản và phụ đề.
+
+Windows x64. Dùng HITechDev.AIStudio.F0-stable-Setup.exe để cài mới hoặc cập nhật; giữ dữ liệu dự án, Brandkit, tài khoản và thiết lập đã lưu.
+
+### Kiểm tra phát hành
+
+Kiểm thử v1.2.8 gồm đối chiếu payload Setup/gói cập nhật, runtime EXE, nâng cấp thật bằng Update.exe từ 1.2.6 và 1.2.7 với dữ liệu thử, kiểm tra migration mặc định DeepSeek một lần và giữ lựa chọn sau đó trên EXE. 341 kiểm thử backend liên quan và 23 kiểm thử frontend đạt; một test cũ được loại khỏi bộ chọn và có ghi trong báo cáo source. Metadata cập nhật ký Ed25519. Bộ cài chưa ký Authenticode; chưa chạy Setup trên Windows sạch. QA EXE không gọi AI hay tạo ảnh/video thật.
+
 ## 1.2.7 — 27/10/2026
 
 - Cải thiện tự điều phối tài khoản Gemini, ChatGPT và DeepSeek trong phân tích Brandkit, tìm chủ đề và viết kịch bản. Phân biệt tài khoản đang bận, cần đăng nhập và hết hạn mức; dùng đúng profile đã lưu và cài đặt hiện tại.
