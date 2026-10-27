@@ -1,5 +1,13 @@
 # Lịch sử phát hành
 
+## 1.2.7 — 27/10/2026
+
+- Cải thiện tự điều phối tài khoản Gemini, ChatGPT và DeepSeek trong phân tích Brandkit, tìm chủ đề và viết kịch bản. Phân biệt tài khoản đang bận, cần đăng nhập và hết hạn mức; dùng đúng profile đã lưu và cài đặt hiện tại.
+- ChatGPT ưu tiên ngày/giờ reset chính xác từ thông báo nền tảng, hiển thị mốc mở lại cùng đếm ngược và tự cho phép điều phối khi đến hạn. Thông báo dạng “chờ 12 giờ” được ghi rõ là mốc dự kiến.
+- Giảm lượt tải tệp ChatGPT: hướng dẫn tác vụ gửi trong chat; dữ liệu và câu trả lời AI ở TXT, skill/channel/ảnh giữ riêng. Tái dùng tệp không đổi trong đúng hội thoại đã xác nhận.
+- Cải thiện nhận diện tệp/ảnh đã tải, chờ đúng câu trả lời và giữ phiên trình duyệt giữa các bước. Tạm dừng giải phóng phiên và không làm mất phần đã hoàn tất.
+- Sắp xếp lại Cài đặt Chat AI, Tài khoản & kết nối và Ảnh & Video; giữ bản nháp khi chuyển mục và cập nhật trạng thái kết nối rõ hơn.
+
 ## 1.2.6 (stable) — 27/10/2026
 
 - Viết nháp, biên tập và hoàn thiện kịch bản theo từng phần trên Gemini, ChatGPT và DeepSeek Web. Đếm lượng lời kể thực tế, chỉ bổ sung phần thiếu và giữ các phần đã đạt khi thử lại.
