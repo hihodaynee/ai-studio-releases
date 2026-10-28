@@ -1,5 +1,20 @@
 # Lịch sử phát hành
 
+## 1.2.9 — 28/10/2026
+
+- Sửa DeepSeek bấm Gửi quá sớm khi nút còn khóa; xác nhận đã gửi rồi mới chờ phản hồi.
+- ChatGPT nhận đúng ảnh đính kèm và lấy lại câu trả lời đã hoàn tất khi tab cũ bị kẹt.
+- Chọn Frame video hoặc Thumbnail khi phân tích phong cách hình ảnh. Một ảnh cũng phân tích được; lấy frame trực tiếp giúp tránh tải cả video dài.
+- Cải thiện tạo giọng đọc Google AI Studio: xử lý hộp chào mừng, thông báo cũ và lỗi kết nối tạm thời; kiểm tra file âm thanh tải về.
+- Dola chờ ảnh tham chiếu tải xong, giữ bằng chứng lượt gửi và cho phép chủ động tạo lại đúng cảnh chưa xác nhận mà không mất ảnh đã lưu.
+- Sửa tải phụ đề SRT/VTT lên DeepSeek và thông báo đúng nhà cung cấp.
+
+Windows x64. Dùng HITechDev.AIStudio.F0-stable-Setup.exe để cài mới hoặc cập nhật; giữ dữ liệu dự án, Brandkit, tài khoản và thiết lập đã lưu.
+
+### Kiểm tra phát hành
+
+Kiểm thử v1.2.9 gồm đối chiếu payload Setup/gói cập nhật, runtime EXE và nâng cấp thật bằng Update.exe từ 1.2.7 và 1.2.8 với dữ liệu thử. Kiểm tra các module sửa lỗi được đóng gói, hai lựa chọn nguồn ảnh, migration và giữ dữ liệu/cài đặt. Các test theo phạm vi đã đạt; chưa tuyên bố toàn bộ suite repository. Metadata cập nhật ký Ed25519. Bộ cài chưa ký Authenticode; chưa chạy Setup trên Windows sạch. QA EXE không gọi AI hay tạo ảnh/video thật.
+
 ## 1.2.8 — 28/10/2026
 
 - Công cụ nhanh dùng cùng Studio giọng đọc, bộ giọng, chế độ đọc và biểu cảm với Manual; nghe và tải WAV ngay trong tab.
