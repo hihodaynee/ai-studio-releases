@@ -1,5 +1,18 @@
 # Lịch sử phát hành
 
+## 1.3.0 — 03/11/2026
+
+- Tách Brandkit Câu chuyện và Brandkit Review. Khám phá với AI có bộ câu hỏi và skill riêng cho ngành hàng, khách hàng, cách kể chuyện và lời mời mua hàng. Brandkit cũ được giữ là Câu chuyện.
+- Quy trình review quản lý sản phẩm, ảnh gốc, nguồn đối chiếu và lịch sử bài viết riêng; có thùng rác sản phẩm. Gợi ý sản phẩm tìm theo ngành hàng và thông tin gần đây, nhập thông tin và tải ảnh về đúng hồ sơ.
+- Auto Review tự tìm nguồn khi người dùng chưa bổ sung, đối chiếu dữ kiện rồi viết theo tình huống, diễn biến và kết thúc. Giữ giọng kể, nhân vật và phong cách hình ảnh của Brandkit; có kiểm tra nội dung và tiếp tục phần đã hoàn tất.
+- Video Review có timeline, xuất video và bản dựng CapCut. Tỷ lệ mặc định theo project, có thể chọn ngang hoặc dọc. Ảnh sản phẩm thật nằm riêng trong thư viện để người dùng đặt vào đúng đoạn nhắc sản phẩm và chỉnh trên timeline; không mặc định ghép ảnh hay chèn phụ đề.
+- Bổ sung quyền Quy trình review trong các gói, cùng cấp với Quy trình video và các khu vực chức năng khác.
+- Cải thiện gửi skill và dữ liệu Review bằng tệp trong ChatGPT, tiếp tục Auto sau kiểm tra nội dung và phục hồi khởi động desktop; sửa tình trạng giữ khóa cơ sở dữ liệu khi tìm tài khoản tạo ảnh cảnh.
+
+Windows x64. Dùng `HITechDev.AIStudio.F0-stable-Setup.exe` để cài mới hoặc cập nhật. Máy đang dùng stable có thể cập nhật trong **Cài đặt → Cập nhật ứng dụng**.
+
+Gói phát hành được đối chiếu payload Setup/nupkg, runtime EXE, tài nguyên Review và nâng cấp bằng Update.exe từ v1.2.8, v1.2.9 với dữ liệu thử. Metadata cập nhật ký Ed25519. Bộ cài chưa ký Authenticode; chưa chạy Setup trên Windows sạch. QA đóng gói không gửi thêm lượt AI và không dùng dữ liệu thật của người dùng.
+
 ## 1.2.9 — 28/10/2026
 
 - Sửa DeepSeek bấm Gửi quá sớm khi nút còn khóa; xác nhận đã gửi rồi mới chờ phản hồi.
