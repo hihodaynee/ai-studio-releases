@@ -1,5 +1,19 @@
 # Lịch sử phát hành
 
+## 1.3.1 — 05/11/2026
+
+- Brandkit học hướng nội dung từ nhiều tiêu đề của kênh để xác định chủ đề, ngách và tên tổng hợp; ảnh tham chiếu Brandkit được đưa vào lúc tạo nhân vật và thumbnail.
+- Cải thiện phục hồi ảnh Google Flow để đối chiếu trạng thái và giữ lại ảnh đã xác nhận, hạn chế lặp thao tác kiểm tra khi tác vụ đang chạy.
+- Thêm quét và dọn tệp tạm, dữ liệu Chromium thử nghiệm và tác vụ cũ trong Cài đặt; phạm vi dọn được kiểm tra để giữ dữ liệu dự án và tài khoản.
+- Sửa xóa kịch bản khi cơ sở dữ liệu đang có giao dịch đọc hoặc bận, tránh rollback giao dịch dùng chung.
+- Cải thiện thu thập tín hiệu sản phẩm gần đây và khôi phục một số luồng AI/YouTube.
+
+Windows x64. Dùng `HITechDev.AIStudio.F0-stable-Setup.exe` để cài mới hoặc cập nhật. Ứng dụng tiếp tục dùng dữ liệu, tài khoản, Brandkit và thiết lập hiện có.
+
+### Kiểm tra phát hành
+
+Đã đối chiếu payload bộ cài/gói cập nhật và runtime; diễn tập nâng cấp bằng Update.exe từ v1.3.0 với dữ liệu thử, kiểm tra giữ dữ liệu và xác minh feed stable có chữ ký Ed25519 sequence 23. Tải ẩn danh các artifact và kiểm tra luồng cập nhật từ EXE phát hành đều đạt. 146 kiểm thử backend liên quan và 16 kiểm thử frontend đạt. Bộ cài chưa ký Authenticode; chưa chạy Setup trên Windows sạch. QA không gọi dịch vụ AI và không tạo ảnh/video thật.
+
 ## 1.3.0 — 03/11/2026
 
 - Tách Brandkit Câu chuyện và Brandkit Review. Khám phá với AI có bộ câu hỏi và skill riêng cho ngành hàng, khách hàng, cách kể chuyện và lời mời mua hàng. Brandkit cũ được giữ là Câu chuyện.

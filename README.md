@@ -2,11 +2,11 @@
 
 Kho phân phối các bản cài đặt và cập nhật AI Studio cho Windows.
 
-Tải [AI Studio 1.3.0 stable](https://github.com/hihodaynee/ai-studio-releases/releases/tag/v1.3.0) cho Windows x64, hoặc [tải trực tiếp bộ cài](https://github.com/hihodaynee/ai-studio-releases/releases/download/v1.3.0/HITechDev.AIStudio.F0-stable-Setup.exe). Dùng tệp `HITechDev.AIStudio.F0-stable-Setup.exe` để cài mới hoặc cập nhật; dữ liệu ứng dụng được giữ lại.
+Tải [AI Studio 1.3.1 stable](https://github.com/hihodaynee/ai-studio-releases/releases/tag/v1.3.1) cho Windows x64, hoặc [tải trực tiếp bộ cài](https://github.com/hihodaynee/ai-studio-releases/releases/download/v1.3.1/HITechDev.AIStudio.F0-stable-Setup.exe). Dùng tệp `HITechDev.AIStudio.F0-stable-Setup.exe` để cài mới hoặc cập nhật; dữ liệu ứng dụng được giữ lại.
 
 Máy đang dùng bản stable trước có thể cập nhật trong **Cài đặt → Cập nhật ứng dụng**. Người dùng sẽ thấy thông báo cập nhật trên giao diện khi có bản mới.
 
-Bản 1.3.0 bổ sung Brandkit và Quy trình review sản phẩm với bộ skill riêng, gợi ý và nhập thông tin/ảnh sản phẩm, Auto Review theo câu chuyện, timeline và xuất CapCut. Ảnh sản phẩm thật được đặt thủ công trên timeline; tỷ lệ video theo project. Có quyền Quy trình review trong các gói và cải thiện ChatGPT, tiếp tục Auto, khởi động desktop.
+Bản 1.3.1 cải thiện phân tích Brandkit theo toàn kênh, dùng ảnh tham chiếu Brandkit khi tạo nhân vật/thumbnail, khôi phục ảnh Flow và thêm công cụ quét/dọn dữ liệu tạm an toàn. Bản này cũng sửa xóa kịch bản khi cơ sở dữ liệu bận và cải thiện một số luồng AI/YouTube.
 
 Xem [lịch sử thay đổi](CHANGELOG.md) và ghi chú của từng bản phát hành trước khi cập nhật.
 
